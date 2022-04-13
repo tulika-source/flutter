@@ -1,3 +1,4 @@
+import 'package:category_route_list/music_play.dart';
 import 'package:flutter/material.dart';
 
 import 'package:category_route_list/job.dart';
@@ -55,10 +56,22 @@ class DetailScreen extends StatelessWidget {
         padding: const EdgeInsets.all(4.0),
         child: Text(todo.description),
     ),
+
         new Container(
           padding: const EdgeInsets.all(4.0),
-          child: Text(todo.location),
+          child: Text(todo.location,
+       ),
+
         ),
+      ElevatedButton(
+        child: Text('Next'),
+        onPressed: (){
+          Navigator.pushReplacement(context,
+              MaterialPageRoute(builder: (BuildContext ctx) => MusicPlay()));
+
+        },
+      ),
+
     ],
     ),
     ),
